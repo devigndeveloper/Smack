@@ -1,5 +1,6 @@
 package com.devign.smack
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -51,8 +52,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     // ---  BUTTONS  ---
-    fun loginBtnNavClicked(view: View) {
 
+    // Redirect user to LOGIN Activity
+    fun loginBtnNavClicked(view: View) {
+        val loginIntent = Intent(this, LoginActivity::class.java)
+        startActivity(loginIntent)
     }
 
     fun addChannelClicked(view: View) {
@@ -62,4 +66,6 @@ class MainActivity : AppCompatActivity() {
     fun sendMessageBtnClicked(view: View) {
 
     }
+
+
 }
